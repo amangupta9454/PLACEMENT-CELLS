@@ -35,11 +35,29 @@ const Navbar = () => {
     <nav className="fixed w-full z-50 glass-panel border-b border-[var(--panel-border)] shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => navigate('/')}>
-            <Code2 className="h-8 w-8 text-blue-500" />
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 hidden sm:block">
-              Placement Cell
-            </span>
+          <div className="flex-shrink-0 flex items-center gap-4">
+            <div className="flex items-center gap-3">
+              <img 
+                src="/logo.png" 
+                alt="Placement Cell Logo" 
+                className="h-12 sm:h-14 w-auto object-contain cursor-pointer bg-white p-1 rounded-md shadow-sm transition-transform hover:scale-105"
+                onClick={() => navigate('/')}
+              />
+              <a href="https://www.hiet.org/" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="/hiet.png" 
+                  alt="HIET Logo" 
+                  className="h-12 sm:h-14 w-auto object-contain cursor-pointer bg-white p-1 rounded-md shadow-sm transition-transform hover:scale-105" 
+                />
+              </a>
+              <a href="https://sunstone.in/" target="_blank" rel="noopener noreferrer">
+                <img 
+                  src="/sunstone.jpg" 
+                  alt="Sunstone Logo" 
+                  className="h-12 sm:h-14 w-auto object-contain cursor-pointer bg-white p-1 rounded-md shadow-sm transition-transform hover:scale-105" 
+                />
+              </a>
+            </div>
           </div>
           
           <div className="hidden md:block">

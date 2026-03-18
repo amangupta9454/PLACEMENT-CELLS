@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Code2 className="h-8 w-8 text-blue-500" />
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/logo.png" alt="Placement Cell Logo" className="h-12 w-auto object-contain" />
               <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
                 Placement Cell
               </span>
