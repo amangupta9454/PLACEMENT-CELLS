@@ -7,9 +7,6 @@ import { initSocket } from './utils/socketService.js';
 
 dotenv.config();
 
-// Connect to MongoDB
-connectDB();
-
 const app = express();
 const server = http.createServer(app);
 
@@ -55,6 +52,17 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Connect to MongoDB FIRST, then start the server
+// This prevents "bufferCommands = false" errors when requests arrive
+// before the DB connection is established.
+(async () => {
+  try {
+    await connectDB();
+    server.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  } catch (err) {
+    console.error('Failed to connect to MongoDB. Server not started.', err);
+    process.exit(1);
+  }
+})();
