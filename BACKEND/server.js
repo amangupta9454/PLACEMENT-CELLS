@@ -28,6 +28,7 @@ import announcementRoutes from './routes/announcementRoutes.js';
 import notificationRoutes from './routes/notificationRoutes.js';
 import feedbackRoutes from './routes/feedbackRoutes.js';
 import activityRoutes from './routes/activityRoutes.js';
+import internshipRoutes from './routes/internshipRoutes.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 
 // Routes
@@ -41,6 +42,7 @@ app.use('/api/announcements', announcementRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/feedback', feedbackRoutes);
 app.use('/api/activity', activityRoutes);
+app.use('/api/internships', internshipRoutes);
 
 app.get('/', (req, res) => {
   res.send('Placement Cell API is running...');

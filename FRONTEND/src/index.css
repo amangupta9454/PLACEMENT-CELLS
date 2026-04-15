@@ -25,18 +25,6 @@
     --text-inverse: #ffffff;
   }
 
-  .dark {
-    --bg-primary: #040508;
-    --bg-secondary: #090a0f;
-    --panel-bg: rgba(255, 255, 255, 0.03);
-    --panel-border: rgba(255, 255, 255, 0.08);
-    
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --text-inverse: #0f172a;
-  }
-
   html {
     scroll-behavior: smooth;
   }
@@ -68,10 +56,6 @@
   .glow-primary {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
   }
-  
-  .dark .glow-primary {
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
-  }
 
   .card-lift {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -79,9 +63,6 @@
   .card-lift:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(59, 130, 246, 0.12);
-  }
-  .dark .card-lift:hover {
-    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.25);
   }
 
   .section-title {
@@ -124,7 +105,7 @@
   color: var(--text-primary);
 }
 
-/* ── Hero background themes ──────────────────────────────────────────────── */
+/* Hero background themes */
 .hero-bg-light {
   background:
     radial-gradient(ellipse 80% 60% at 20% 0%, rgba(219,234,254,0.75) 0%, transparent 60%),
@@ -133,30 +114,9 @@
     #ffffff;
 }
 
-.hero-bg-dark {
-  background:
-    radial-gradient(ellipse 80% 60% at 20% 0%, rgba(29,78,216,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 10%, rgba(124,58,237,0.10) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 50% 90%, rgba(8,145,178,0.08) 0%, transparent 60%),
-    #04050a;
-}
-
-/* Dark mode subtle grid overlay */
-.dark .grid-overlay::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* Light mode subtle dot grid */
 .light-dots::before,
-:root:not(.dark) .grid-overlay::before {
+.grid-overlay::before {
   content: '';
   position: absolute;
   inset: 0;

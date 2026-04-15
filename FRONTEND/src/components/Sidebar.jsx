@@ -17,13 +17,16 @@ const Sidebar = ({ role }) => {
     { name: 'Dashboard', path: '/student/dashboard', icon: LayoutDashboard },
     { name: 'Jobs', path: '/student/jobs', icon: Briefcase },
     { name: 'My Applications', path: '/student/applications', icon: FileText },
-    { name: 'Profile & Resume', path: '/student/profile', icon: Settings },
+    { name: 'Internships', path: '/student/internships', icon: Briefcase },
+    { name: 'Create Resume', path: '/student/resume', icon: FileText },
+    { name: 'Profile', path: '/student/profile', icon: Settings },
   ];
 
   const tpoLinks = [
     { name: 'Dashboard', path: '/tpo/dashboard', icon: LayoutDashboard },
     { name: 'Manage Students', path: '/tpo/students', icon: Users },
     { name: 'Manage Jobs', path: '/tpo/jobs', icon: Briefcase },
+    { name: 'Internships', path: '/tpo/internships', icon: Briefcase },
     { name: 'Applicants', path: '/tpo/applicants', icon: FileText },
     { name: 'Announcements', path: '/tpo/announcements', icon: Bell },
     { name: 'Feedback', path: '/tpo/reviews', icon: Star },
