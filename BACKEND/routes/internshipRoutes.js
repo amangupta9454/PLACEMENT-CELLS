@@ -10,7 +10,7 @@ import { protect } from '../middleware/authMiddleware.js';
 const router = express.Router();
 
 router.route('/')
-  .get(protect, getInternships)
+  .get(getInternships)
   .post(protect, createInternship);
 
 router.route('/:id')

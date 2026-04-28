@@ -13,9 +13,8 @@ const milestones = [
 ];
 
 const team = [
-  { name: 'Dr. R. K. Sharma', role: 'Chief Placement Officer', initials: 'RS', color: 'blue' },
-  { name: 'Prof. Neha Gupta', role: 'Industry Relations Lead', initials: 'NG', color: 'purple' },
-  { name: 'Mr. Aditya Bose', role: 'Student Coordination Head', initials: 'AB', color: 'emerald' },
+  { name: 'Jyoti Tomer', role: 'Placement Cell Head', initials: 'JT', color: 'blue' },
+  { name: 'Sweta Gautam', role: 'Coordinator', initials: 'SG', color: 'purple' },
 ];
 
 const About = () => {
